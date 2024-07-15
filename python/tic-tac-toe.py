@@ -51,7 +51,7 @@ def get_valid_input(player):
         except ValueError:
             print("Please enter a valid number.")
 
-print("Welcome to Tic-Tac-Toe, Shitty NoGambling edition!")
+print("Welcome to Tic-Tac-Toe, MY EDITION!!!!")
 sleep(1)
 
 while True:
