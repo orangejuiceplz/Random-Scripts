@@ -5,3 +5,6 @@
 ## feel free to check them out
 
 -orangejuiceplz <3
+
+>[!NOTE]
+>PR's, issues, etc. will be disregarded as these are mine and idrc
