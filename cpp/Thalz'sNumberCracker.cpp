@@ -97,7 +97,7 @@ public:
 
         std::cout << "\nAnalysis complete. Final diagnosis:" << std::endl;
         sleepMs(1000);
-        std::cout << "The number " << input << " is returns inconclusive Couldn't find the meaning." << std::endl;
+        std::cout << "The number " << input << " is returns inconclusive. Couldn't find the meaning." << std::endl;
     }
 };
 
