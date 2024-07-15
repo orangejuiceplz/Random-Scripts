@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<canvas id="myCanvas" width="1920" height="1080" style="border:1px solid grey"></canvas>
+<script>
+//The string that will be encoded. Can be changed to make another file.
+
+const string = "hello tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufvllo tehre my name is daniel and I am wso cool;kqljjdnh;iuowehrfp9iwehyriulebsknfhsbfiulsefhlisfhi8seuhrgfiylseho;iusehfilesurhyoi;esuhrgi;esurhi;esurhiylesru;oiesulrhylseurilsehriuleskrhiulseriu;oewhjriluewyr98weoiurliueshrsilfrhiuslefu09rjo9esru09o;seilhrlisufr"
+console.log("Starting...")
+
+//Starting variables required for function of HTML5 Canvas.
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+console.log("Loading var's successful")
+
+//Turns the string into binary data
+function text2Binary(string) {
+    return string.split('').map(function (char) {
+        return char.charCodeAt(0).toString(2)
+    }).join(' ')
+
+}
+//Removes whitespace (So its a solid line of 1's and 0's)
+const binary = text2Binary(string).replace(/\s+/g, '')
+//console.log(binary);
+
+//Make an array with individual characters of the binary code.
+const info = Array.from(binary);
+
+
+//First loop, controls vertical pixels
+for (let a = 0; a<217; a++) { //217
+    //Controls what height the pixel starts at.
+    let startHeight = (5*a)
+
+    //Logs the line its on to console.
+    console.log(a+1);
+    
+    //Nested loop, constrols horizontal pixels
+    for (let i = 0; i<385; i++) { //385
+
+      //Sets the color of the pixel depending on binary value
+  if (info[0]) {     
+   if (info[0] === "1") {
+          ctx.fillStyle = `white`;
+        } else {
+          ctx.fillStyle = `black`;
+        }
+        info.shift();
+  } else {
+ctx.fillStyle = `purple`
+  }
+        let startWidth = (5*i)
+    
+        //Draw a 5x5 pixel
+        ctx.beginPath();
+        ctx.rect(startWidth, startHeight, 5, 5);
+        ctx.fill();
+        
+    }
+}
+console.log("Complete")
+</script>
+</body>
+</html>
