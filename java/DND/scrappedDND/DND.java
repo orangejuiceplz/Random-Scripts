@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-// Alexander Kociuba, Paul Melo, Shiven Kishore
     public class DND
 {
     private int roll;
