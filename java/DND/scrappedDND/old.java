@@ -1,4 +1,3 @@
-// Alexander Kociuba, Paul Melo, Shiven Kishore
 import java.util.ArrayList;
 import java.util.Scanner;
 public class DNDtester 
