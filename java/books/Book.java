@@ -1,27 +1,43 @@
-public class BookTester {
-    public static void main(String[] args) {
-        // Create a new Book object using the first constructor
-        Book book1 = new Book("If I Did It: Confessions of the Killer", "O. J. Simpson", 316);
-       
-        // Prints all the detailS of the booK
-        
-        book1.printDetails();
-       
-        // Prints Title 'by' Author
-        System.out.println(book1.getShortDescription());
-       
-        // Prints if book is long or short. (Pages>300)
-        System.out.println(book1.isLong());
+public class Book {
+    // Instance variables - To determined title, author and pages
+  
+    private String title;
+   
+    private String author;
+   
+    private int pages;
 
-        // Create a new Book object using the second constructor
-        Book book2 = new Book("Minecraft Essential Handbook", "Mojang");
-       
-        book2.printDetails();
-       
-        System.out.println(book2.getShortDescription());
-        
-        System.out.println(book2.isLong());
-        
-        // Lines 19-23 do the same as lines 8-14
+    // Constructor 1
+    public Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    // Constructor 2
+    public Book(String title, String author) {
+        this(title, author, 0); // Calls back to the first constructor
+    }
+
+    // Prints details about the book
+    public void printDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+    }
+
+    // Returns a short description of the book
+    public String getShortDescription() {
+        return title + " by " + author;
+    }
+
+    // Returns whether the book is long or short
+    public String isLong() {
+        // An If/Else selection - if pages is greater than 300, return long; vice versa.
+        if (pages > 300) {
+            return "The book is long.";
+        } else {
+            return "The book is short.";
+        }
     }
 }
