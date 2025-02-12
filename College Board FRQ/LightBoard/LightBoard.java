@@ -3,15 +3,17 @@ public class LightBoard {
   
     // part a
     
-    public Lightboard(int numRows, int numCols) {
-      lights = new boolean[numRows][numCols];
-  
-      for (int row = 0; row < numRows; r++) {
-        for (int column = 0; column < numCols; c++) {
-          lights[row][column] = (Math.random() < 4);
+public LightBoard(int numRows, int numCols) {
+    lights = new boolean[numRows][numCols];
+
+    for(int r = 0; r < lights.length; r++) {
+        for(int c = 0; c < lights[0].length; c++) {
+            if(Math.random() <= 0.4) {
+                lights[r][c] = true;
+            }
         }
-      }
     }
+}
   
     // part b
   
