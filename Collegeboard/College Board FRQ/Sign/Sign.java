@@ -18,7 +18,7 @@ public class Sign {
     }
     String lines = "";
     String remMsg = message;
-    while (remMsg.length() > lineWidth) {
+    while (remMsg.length() > width) {
       lines += remMsg.subString(0, width);
       lines += ";";
       remMsg = remMsg.substring(width);
