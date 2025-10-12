@@ -123,4 +123,58 @@ else
     print_warn "Skipping tlp configuration"
 end
 
-print_info "Setup complete! Please restart your Fish shell or run 'source $CONFIG_FILE' to apply changes."
+# 4. Check and install Sublime Text
+print_info "Checking for Sublime Text..."
+if not command -v subl &> /dev/null
+    print_warn "Sublime Text not found. Installing..."
+    
+    # Install sublime-text-4 from the official repository
+    # First, we need to import the GPG key and add the repository
+    print_info "Setting up Sublime Text repository..."
+    
+    # Install the GPG key
+    curl -O https://download.sublimetext.com/sublimehq-pub.gpg
+    sudo pacman-key --add sublimehq-pub.gpg
+    sudo pacman-key --lsign-key 8A8F901A
+    rm sublimehq-pub.gpg
+    
+    # Add the stable channel to pacman.conf if not already present
+    if not grep -q "sublimetext" /etc/pacman.conf
+        print_info "Adding Sublime Text repository to pacman.conf"
+        echo "" | sudo tee -a /etc/pacman.conf > /dev/null
+        echo "[sublime-text]" | sudo tee -a /etc/pacman.conf > /dev/null
+        echo "Server = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf > /dev/null
+        sudo pacman -Sy
+    end
+    
+    sudo pacman -S --noconfirm sublime-text
+    if test $status -eq 0
+        print_info "Sublime Text installed successfully"
+    else
+        print_error "Failed to install Sublime Text"
+        print_warn "You can try installing it manually from AUR: yay -S sublime-text-4"
+    end
+else
+    print_info "Sublime Text is already installed"
+end
+
+# 5. Add ILoveCandy easter egg to pacman.conf
+print_info "Checking for ILoveCandy in pacman.conf..."
+if not grep -q "^ILoveCandy" /etc/pacman.conf
+    print_info "Adding ILoveCandy easter egg to pacman.conf"
+    # Backup pacman.conf
+    sudo cp /etc/pacman.conf /etc/pacman.conf.backup
+    
+    # Add ILoveCandy under the [options] section
+    sudo sed -i '/^\[options\]/a ILoveCandy' /etc/pacman.conf
+    
+    if test $status -eq 0
+        print_info "ILoveCandy added successfully! 🍬"
+        print_info "Your pacman progress bar will now be a Pac-Man eating candy!"
+    else
+        print_error "Failed to add ILoveCandy"
+    end
+else
+    print_info "ILoveCandy is already enabled! 🍬"
+end
+source $CONFIG_FILE
