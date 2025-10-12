@@ -328,11 +328,12 @@ echo "USERNAME_PLACEHOLDER:USER_PASSWORD_PLACEHOLDER" | chpasswd
 # step 36: configure sudo
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
-# step 38: update system
-pacman -Syu --noconfirm
+# step 38: update system and add some packages
+pacman -Syu sddm firefox --noconfirm
 
-# step 41: enable networkmanager
+# step 41: enable networkmanager and sddm
 systemctl enable NetworkManager
+systemctl enable sddm
 
 # step 42-43: install and configure grub
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB DISK_PLACEHOLDER
@@ -364,7 +365,7 @@ print_step "Unmounting and preparing to reboot..."
 umount -R /mnt || umount -l /mnt
 swapoff "$SWAPDRIVE"
 
-print_section_header "INSTALLATION COMPLETE! 🐧"
+print_section_header "INSTALLATION COMPLETE!"
 
 echo -e "${GREEN}Your new Arch Linux system is ready!${NC}\n"
 echo "System information:"
