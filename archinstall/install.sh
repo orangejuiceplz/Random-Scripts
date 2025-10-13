@@ -333,7 +333,7 @@ pacman -Syu sddm firefox --noconfirm
 
 # step 41: enable networkmanager and sddm
 systemctl enable NetworkManager
-systemctl enable sddm
+# systemctl enable sddm; right now i just want to install, we need a DE first, so you can install plasma then enable sddm
 
 # step 42-43: install and configure grub
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB DISK_PLACEHOLDER
