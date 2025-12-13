@@ -1,3 +1,11 @@
+// check usage of
+// _map
+// _mapValues
+// _values
+// _redduce
+
+
+
 // extract group name from the field data
 function transformField(rawFieldData) {
     const { group, ...rest } = rawFieldData;
