@@ -1,0 +1,37 @@
+metadata [
+    A: {
+        FIELD_1 [
+            type: BOOLEAN
+            maxLen: 0
+            group:  BASIC
+        ]
+
+        FIELD_2 [
+           type: STRING
+           maxLen: 50
+           group: BASIC
+        ]
+
+        FIELD_3 [
+            type: INTEGER
+            maxLen: 0
+            group: ADVANCED
+        ]
+    }
+
+    B: {
+        FIELD_4 [
+            type: DOUBLE
+            maxLen: 0
+            group: ADVANCED
+        ]
+    }
+
+    C: {
+        FIELD_5 [
+            type: STRING
+            maxLen: 50
+            group: BASIC
+        ]
+    }
+]

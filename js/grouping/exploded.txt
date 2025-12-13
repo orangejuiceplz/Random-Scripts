@@ -1,0 +1,39 @@
+{
+    A {
+        BASIC {
+            FIELD_1 {
+                type: BOOLEAN
+                maxLen:
+            }
+            FIELD_2 {
+                type: STRING
+                maxLen: 50
+            }
+        }
+
+        ADVANCED {
+            FIELD_3 {
+                type: INTEGER
+                maxLen: 0
+            }
+        }
+    }
+
+    B {
+        BASIC {
+            FIELD_5 {
+               type: STRING
+                maxLen: 50
+            }
+        ]
+    }
+
+    C {
+        BASIC {
+            FIELD_5 {
+               type: STRING
+                maxLen: 50
+            }
+        ]
+    }
+}
