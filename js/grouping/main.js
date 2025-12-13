@@ -2,6 +2,7 @@
 // _map
 // _mapValues
 // _values
+// _flatten
 // _redduce
 // _flatMap
 
