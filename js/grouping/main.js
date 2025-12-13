@@ -3,7 +3,7 @@
 // _mapValues
 // _values
 // _redduce
-
+// _flatMap
 
 
 // extract group name from the field data
