@@ -5,7 +5,6 @@
 // _redduce
 // _flatMap
 
-
 // extract group name from the field data
 function transformField(rawFieldData) {
     const { group, ...rest } = rawFieldData;
@@ -88,4 +87,10 @@ const metadata = {
 };
 
 const exploded = convertToExploded(metadata);
+
+/*
+const newExploded = map(metaData, function(item) {
+    return { }
+});
+*/
 // console.log(JSON.stringify(exploded, null, 2));
