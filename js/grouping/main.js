@@ -6,53 +6,42 @@
 // _redduce
 // _flatMap
 
+const _ = require('lodash');
+
 // extract group name from the field data
 function transformField(rawFieldData) {
-    const { group, ...rest } = rawFieldData;
     return {
-        groupName: group,
-        fieldData: rest
+        groupName: rawFieldData.group,
+        fieldData: _.omit(rawFieldData, ['group'])
     };
 }
 
-/**
- * organizes fields into groups for one category 
- * 
- * 1. loop through every field in the category
- * 2. separate the group name from the data (calling transformField())
- * 3. create the group object if it doesn't exist
- * 4. assign the field to that group
-*/ 
+// basic, advanced
 function processCategory(categoryFields) {
-    const grouped = {};
-
-    for (const [fieldName, rawData] of Object.entries(categoryFields)) {
-
+    return _.reduce(categoryFields, (result, rawData, fieldName) => {
+        
         const { groupName, fieldData } = transformField(rawData);
 
-        if (!grouped[groupName]) {
-            grouped[groupName] = {};
+        if (!result[groupName]) {
+            result[groupName] = {};
         }
 
-        grouped[groupName][fieldName] = fieldData;
-    }
+        result[groupName][fieldName] = fieldData;
 
-    return grouped;
+        return result;
+    }, {});
 }
 
-/**
- * 1. loop through a b and c (category)
- * 2. process the fields for that category using the above fucntions
- */
+// tries to con vert metadata to exploded
+// raw: category -> field -> {type, maxLen, grou}
+// exploded: category -> group -> field -> {type, maxLen}
 function convertToExploded(metadata) {
-    const result = {};
-
-    for (const [categoryName, categoryData] of Object.entries(metadata)) {
-        result[categoryName] = processCategory(categoryData);
-    }
-
-    return result;
+    // a b or c
+    return _.mapValues(metadata, (categoryData) => {
+        return processCategory(categoryData);
+    });
 }
+
 const metadata = {
     A: {
         FIELD_1: {
