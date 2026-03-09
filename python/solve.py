@@ -73,7 +73,10 @@ def draw_slope_field(equation_str, x_min, x_max, y_min, y_max, x_step=1, y_step=
     if show_curve:
         def dy_dx_scipy(t, y_val):
             try:
-                return eval(python_ready_equation, {"__builtins__": None}, {"x": t, "y": y_val[0], "np": np})
+                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": t, "y": y_val[0], "np": np})
+                if slope > 10000: return 10000
+                if slope < -10000: return -10000
+                return slope
             except:
                 return 0
                 
