@@ -2,6 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import solve_ivp
 
+MATH_CONTEXT = {
+    "sin": np.sin, "cos": np.cos, "tan": np.tan,
+    "arcsin": np.arcsin, "arccos": np.arccos, "arctan": np.arctan,
+    "exp": np.exp, "log": np.log, "log10": np.log10,
+    "sqrt": np.sqrt, "pi": np.pi, "e": np.e, 
+    "np": np
+}
+
 def format_num(value, assume_whole):
     if value == "Undefined": return value
     if assume_whole and isinstance(value, float) and value.is_integer(): return int(value)
@@ -17,7 +25,7 @@ def text_based_field(equation_str, x_init, x_final, x_step, y_init, y_final, y_s
         x = x_init
         while x <= (x_final + epsilon):
             try:
-                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": x, "y": y, "np": np})
+                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": x, "y": y, **MATH_CONTEXT})
                 results.append((round(x, 3), round(y, 3), round(slope, 3)))
             except ZeroDivisionError:
                 results.append((round(x, 3), round(y, 3), "Undefined"))
@@ -31,7 +39,7 @@ def draw_slope_field(equation_str, x_min, x_max, y_min, y_max, x_step=1, y_step=
     python_ready_equation = equation_str.replace('^', '**')
 
     try:
-        eval(python_ready_equation, {"__builtins__": None}, {"x": 1, "y": 1, "np": np})
+        eval(python_ready_equation, {"__builtins__": None}, {"x": 1, "y": 1, **MATH_CONTEXT})
     except ZeroDivisionError:
         pass 
     except Exception as e:
@@ -50,7 +58,7 @@ def draw_slope_field(equation_str, x_min, x_max, y_min, y_max, x_step=1, y_step=
     for i in range(X.shape[0]):
         for j in range(X.shape[1]):
             try:
-                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": X[i,j], "y": Y[i,j], "np": np})
+                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": X[i,j], "y": Y[i,j], **MATH_CONTEXT})
                 U[i,j] = 1.0
                 V[i,j] = float(slope)
             except ZeroDivisionError:
@@ -73,7 +81,7 @@ def draw_slope_field(equation_str, x_min, x_max, y_min, y_max, x_step=1, y_step=
     if show_curve:
         def dy_dx_scipy(t, y_val):
             try:
-                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": t, "y": y_val[0], "np": np})
+                slope = eval(python_ready_equation, {"__builtins__": None}, {"x": t, "y": y_val[0], **MATH_CONTEXT})
                 if slope > 10000: return 10000
                 if slope < -10000: return -10000
                 return slope
@@ -105,7 +113,9 @@ print("[G] Graph with Curve (Requires starting point)")
 print("[T] Text Table Mode (Raw numbers)")
 mode_choice = input("Select a mode (F/G/T): ").strip().upper()
 
+
 print("\nNote: Use '*' for multiplication (e.g., -x * (y - 1)^2 )")
+print("Math supported: sin(x), cos(x), tan(x), sqrt(x), exp(x), log(x), pi, e")
 user_equation = input("Enter dy/dx = ")
 
 if mode_choice in ['F', 'G']:
